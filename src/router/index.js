@@ -39,6 +39,26 @@ const router = createRouter({
       name: '404',
       component: TemporaryPage,
     },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: TemporaryPage,
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: TemporaryPage,
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: TemporaryPage,
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: TemporaryPage,
+    },
   ],
 })
 
