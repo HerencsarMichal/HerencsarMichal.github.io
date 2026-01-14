@@ -13,23 +13,22 @@ export default {
 
 <template>
   <div id = "app">
-    <!-- Navbar-->
-     <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-brand"></div>
-            <router-link to="/" class="brand-link">Temporary1</router-link>
-        </div>
-        <!-- Navlinks-->
-         <div class="nav-links">
-            <router-link to="/about" class="nav-link">About</router-link>
-            <router-link to="/services" class="nav-link">Services</router-link>
-            <router-link to="/contact" class="nav-link">Contact</router-link>
-            <router-link to="/about" class="nav-link">About</router-link>
-            <router-link to="/services" class="nav-link">Services</router-link>
-            <router-link to="/contact" class="nav-link">Contact</router-link>
-            <router-link to="/profile" class="nav-link">Profil</router-link>
-         </div>
-    </nav>
+    <Navbar />
+    <!--<img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height=" 125" />-->
+
+    <div class="wrapper">
+      <HelloWorld msg="You did it!" />
+      <nav>
+        <RouterLink to="/">Home1appvue</RouterLink>
+        <RouterLink to="/reader">About2</RouterLink>
+        <RouterLink to="/library">About3</RouterLink>
+        <RouterLink to="/cart">About4</RouterLink>
+        <RouterLink to="/viewer">About5</RouterLink>
+        <RouterLink to="/about">About6</RouterLink>
+        <RouterLink to="/about">About7appvue</RouterLink>
+      </nav>
+      </div>
+      <RouterView />
     </div>
 </template>
 

@@ -2,7 +2,7 @@
 
     <nav class="navbar">
         <div class="navbar-container">
-            <div class="navbar-brand"></div>
+            <div class="navbar-brand">
             <router-link to="/" class="brand-link">Temporary1</router-link>
         </div>
         <!-- Navlinks-->
@@ -14,7 +14,7 @@
             <router-link to="/services" class="nav-link">Services</router-link>
             <router-link to="/contact" class="nav-link">Contact</router-link>
             <router-link to="/profile" class="nav-link">Profil</router-link>
-
+         </div>
     </div>
     </nav>
 
