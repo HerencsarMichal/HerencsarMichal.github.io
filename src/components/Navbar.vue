@@ -1,16 +1,14 @@
 <template>
-
     <nav class="navbar">
         <div class="navbar-container">
-            <!--< class="navbar-brand"> -->
-            <!-- <router-link to="/" class="brand-link">Temporary1</router-link> -->
+            <div class="logo">📚</div>
         <!-- Navlinks-->
          <div class="nav-links">
             <router-link to="/about" class="nav-link">About</router-link>
             <router-link to="/services" class="nav-link">Services</router-link>
             <router-link to="/contact" class="nav-link">Contact</router-link>
             <router-link to="/about" class="nav-link">About</router-link>
-            <router-link to="/services" class="nav-link">Services</router-link>
+            <router-link to="/" class="nav-link">Home</router-link>
             <router-link to="/contact" class="nav-link">Contact</router-link>
             <router-link to="/profile" class="nav-link">Profil</router-link>
          <!-- </div> -->
@@ -32,19 +30,24 @@ export default {
     color: white;
     position: fixed;
     width: 100%;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     top: 0;
     z-index: 1000;
+    padding: 0;
+    margin: 0;
     height: 60px;
+    background: black;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container {
-    max-width: 800px;
-    margin: auto;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+    display: flex;
+    padding: 0 30px; /* Odsadenie od ľava pre nabar komponenty*/
     height: 100%;
+}
+.nav-links {
+    padding: 0 30px;
+    display: flex;
+    gap:20px;
 }
 </style>
