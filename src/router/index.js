@@ -3,6 +3,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage.vue'
 import TemporaryPage from '@/views/TemporaryPage.vue'
 import AboutView from '../views/AboutView.vue'
+import CartPage from '@/views/CartPage.vue'
+import ProfilePage from '@/views/ProfilePage.vue'
+import ReaderPage from '@/views/ReaderPage.vue'
+import LibraryPage from '@/views/LibraryPage.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,17 +28,22 @@ const router = createRouter({
     {
       path: '/reader',
       name: 'reader',
-      component: TemporaryPage,
+      component: ReaderPage,
     },
     {
       path: '/library',
       name: 'library',
-      component: TemporaryPage,
+      component: LibraryPage,
     },
     {
       path: '/cart',
       name: 'cart',
-      component: TemporaryPage,
+      component: CartPage,
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: ProfilePage,
     },
     {
       path: '/404',

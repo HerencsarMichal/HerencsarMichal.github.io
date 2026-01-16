@@ -4,13 +4,13 @@
             <div class="logo">📚</div>
         <!-- Navlinks-->
          <div class="nav-links">
-            <router-link to="/about" class="nav-link">About</router-link>
-            <router-link to="/services" class="nav-link">Services</router-link>
-            <router-link to="/contact" class="nav-link">Contact</router-link>
-            <router-link to="/about" class="nav-link">About</router-link>
             <router-link to="/" class="nav-link">Home</router-link>
-            <router-link to="/contact" class="nav-link">Contact</router-link>
+            <router-link to="/reader" class="nav-link">Reader</router-link>
+            <router-link to="/library" class="nav-link">Library</router-link>
             <router-link to="/profile" class="nav-link">Profil</router-link>
+            <router-link to="/cart" class="nav-link">Cart</router-link>
+            <router-link to="/about" class="nav-link">About</router-link>
+            <router-link to="/contact" class="nav-link">Contact</router-link>
          <!-- </div> -->
          </div>
     </div>
