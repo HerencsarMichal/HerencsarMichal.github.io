@@ -11,7 +11,7 @@
             <router-link to="/catalog" class="btn btn-primary">
               Preskúmať knihy
             </router-link>
-            <router-link to="/library" class="btn btn-secondary">
+            <router-link to="/library" class="btn btn-secondary"> 
               Moja knižnica
             </router-link>
           </div>
