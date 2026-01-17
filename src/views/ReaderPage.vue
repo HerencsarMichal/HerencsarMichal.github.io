@@ -1,4 +1,4 @@
-<template>
+<template> 
   <div class="reader-page">
     <!-- Loading -->
     <div v-if="isLoading" class="reader-loading">
@@ -257,22 +257,19 @@ Príjemné čítanie!
     },
 
     saveScrollPosition() {
-      const element = this.$refs.readerContent
-      if (element) {
-        const bookId = this.$route.params.bookId
-        localStorage.setItem(`scroll_${bookId}`, element.scrollTop.toString())
-      }
     },
 
     restoreScrollPosition() {
       this.$nextTick(() => {
         const element = this.$refs.readerContent
-        if (element) {
-          const bookId = this.$route.params.bookId
-          const savedPosition = localStorage.getItem(`scroll_${bookId}`)
-          if (savedPosition) {
-            element.scrollTop = parseInt(savedPosition)
-          }
+        if (element && this.currentProgress > 0) {
+          // Počkaj kým sa načíta obsah a potom obnov pozíciu podľa progress
+          setTimeout(() => {
+            const scrollHeight = element.scrollHeight - element.clientHeight
+            const scrollPosition = (this.currentProgress / 100) * scrollHeight
+            element.scrollTop = scrollPosition
+            console.log(`📖 Obnovená pozícia: ${this.currentProgress}% (${scrollPosition}px)`)
+          }, 500)
         }
       })
     },
@@ -302,9 +299,10 @@ Príjemné čítanie!
 
 <style scoped>
 .reader-page {
-  padding-top: 60px;
+  padding-top: 70px; /* Výška navbar */
   min-height: 100vh;
   transition: background-color 0.3s;
+  background-color: #f5f1e8;
 }
 
 .reader-loading,
@@ -336,7 +334,7 @@ Príjemné čítanie!
 .reader-container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 70px); /* Plná výška mínus navbar */
 }
 
 .reader-header {
@@ -427,7 +425,7 @@ Príjemné čítanie!
 .book-title-main {
   font-size: 2.8rem;
   font-weight: 700;
-  color: gold;
+  color: inherit;
   margin-bottom: 0.5rem;
   text-align: center;
   line-height: 1.2;
@@ -435,7 +433,7 @@ Príjemné čítanie!
 
 .book-author-main {
   font-size: 1.4rem;
-  color: gold;
+  color: inherit;
   opacity: 0.7;
   text-align: center;
   margin-bottom: 2rem;
