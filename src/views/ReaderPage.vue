@@ -336,7 +336,7 @@ Príjemné čítanie!
 .reader-container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh-70px);
+  height: calc(100vh - 70px);
 }
 
 .reader-header {
