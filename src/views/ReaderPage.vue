@@ -427,7 +427,7 @@ Príjemné čítanie!
 .book-title-main {
   font-size: 2.8rem;
   font-weight: 700;
-  color: inherit;
+  color: gold;
   margin-bottom: 0.5rem;
   text-align: center;
   line-height: 1.2;
@@ -435,7 +435,7 @@ Príjemné čítanie!
 
 .book-author-main {
   font-size: 1.4rem;
-  color: inherit;
+  color: gold;
   opacity: 0.7;
   text-align: center;
   margin-bottom: 2rem;

@@ -5,14 +5,14 @@
                 <h3>📚 BookReader</h3>
                 <p>Vaša digitálna knižnica pre pohodlné čítanie kníh online.</p>
             </div>
-            
+
             <div class="footer-links">
                 <div class="footer-section">
-                    <h4>Podpora</h4>
+                    <h4>Rýchle odkazy</h4>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Nápoveda</a></li>
-                        <li><a href="#">Podmienky používania</a></li>
+                        <li><router-link to="/">Domov</router-link></li>
+                        <li><router-link to="/library">Knižnica</router-link></li>
+                        <li><router-link to="/catalog">Katalóg</router-link></li>
                     </ul>
                 </div>
                 <div class="footer-section">
