@@ -16,6 +16,13 @@
                     </ul>
                 </div>
                 <div class="footer-section">
+                    <h4>Informácie</h4>
+                    <ul>
+                        <li><router-link to="/about">O nás</router-link></li>
+                        <li><router-link to="/contact">Kontakt</router-link></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
                     <h4>Kontakt</h4>
                     <ul>
                         <li>📧 info@bookreader.sk</li>
