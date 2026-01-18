@@ -1,18 +1,17 @@
 // src/stores/books.js
 import { defineStore } from 'pinia'
-import booksData from '@/data/books.js'
 
 export const useBooksStore = defineStore('books', {
   state: () => ({
     // Všetky knihy v katalógu
     allBooks: [],
-    
+
     // Nákupný košík
     cart: [],
-    
+
     // Zakúpené knihy (v knižnici)
     purchasedBooks: [],
-    
+
     // Loading state
     isLoading: false
   }),
@@ -62,8 +61,10 @@ export const useBooksStore = defineStore('books', {
     // Inicializácia - načítanie kníh z importovaného súboru
     async initializeBooks() {
       this.isLoading = true
-      
+
       try {
+        const module = await import('@/data/books.js')
+        const booksData = module.default
         // Dáta sú už importované z @/data/books.js
         if (booksData && Array.isArray(booksData)) {
           this.allBooks = booksData
@@ -82,7 +83,7 @@ export const useBooksStore = defineStore('books', {
     // Pridať knihu do košíka
     addToCart(bookId, quantity = 1) {
       const book = this.allBooks.find(b => b.id === bookId)
-      
+
       if (!book) {
         return { success: false, message: 'Kniha nebola nájdená' }
       }
@@ -92,7 +93,7 @@ export const useBooksStore = defineStore('books', {
       }
 
       const existingItem = this.cart.find(item => item.bookId === bookId)
-      
+
       if (existingItem) {
         if (book.stock < existingItem.quantity + quantity) {
           return { success: false, message: 'Nedostatok kusov na sklade' }
@@ -152,9 +153,9 @@ export const useBooksStore = defineStore('books', {
       for (const item of this.cart) {
         const book = this.allBooks.find(b => b.id === item.bookId)
         if (!book || book.stock < item.quantity) {
-          return { 
-            success: false, 
-            message: `Nedostatok kusov: ${book?.title || 'neznáma kniha'}` 
+          return {
+            success: false,
+            message: `Nedostatok kusov: ${book?.title || 'neznáma kniha'}`
           }
         }
       }
@@ -183,8 +184,8 @@ export const useBooksStore = defineStore('books', {
 
       this.clearCart()
 
-      return { 
-        success: true, 
+      return {
+        success: true,
         message: 'Objednávka úspešne dokončená',
         order: orderSummary
       }
@@ -195,7 +196,7 @@ export const useBooksStore = defineStore('books', {
       const purchased = this.purchasedBooks.find(p => p.bookId === bookId)
       if (purchased) {
         purchased.progress = progress
-        
+
         if (progress === 100) {
           purchased.status = 'completed'
         } else if (progress > 0) {
