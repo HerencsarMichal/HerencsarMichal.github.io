@@ -15,7 +15,7 @@
             <!-- Nav links -->
             <div class="nav-links" :class="{ open: mobileMenuOpen }">
                 <router-link to="/" class="nav-link" @click="mobileMenuOpen = false">Domov</router-link>
-                <router-link to="/library" class="nav-link" @click="mobileMenuOpen = false">Knihovňa</router-link>
+                <router-link to="/library" class="nav-link" @click="mobileMenuOpen = false">Knižnica</router-link>
                 <router-link to="/catalog" class="nav-link" @click="mobileMenuOpen = false">Katalóg</router-link>
                 <router-link to="/cart" class="nav-link" @click="mobileMenuOpen = false">Košík</router-link>
                 <router-link to="/about" class="nav-link" @click="mobileMenuOpen = false">O nás</router-link>
@@ -116,9 +116,8 @@ export default {
 }
 
 .nav-link:hover {
-    color: blue;
+    color: goldenrod;
     text-decoration: underline;
-    padding: 0px 10px;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s;
     transform: scale(1, 1);
