@@ -2,7 +2,7 @@
   <div class="page home-page">
     <div class="container">
       <div class="home-container card shadow rounded-xl">
-        
+
         <!-- Hero sekcia -->
         <section class="hero text-center mb-5">
           <h1>Vitajte v BookReader</h1>
@@ -11,11 +11,46 @@
             <router-link to="/catalog" class="btn btn-primary">
               Preskúmať knihy
             </router-link>
-            <router-link to="/library" class="btn btn-secondary"> 
+            <router-link to="/library" class="btn btn-secondary">
               Moja knižnica
             </router-link>
           </div>
         </section>
+        <section class="long-text">
+          <h2>Sila sústredeného čítania</h2>
+
+          <div class="text-columns">
+            <p>
+              V dnešnom digitálnom svete je naša pozornosť neustále rozptyľovaná
+              notifikáciami, sociálnymi sieťami a rýchlym obsahom. Sústredené čítanie
+              sa preto stáva čoraz vzácnejšou, no zároveň hodnotnejšou schopnosťou.
+            </p>
+
+            <p>
+              Čítanie knihy bez prerušovania pomáha mozgu spomaliť, lepšie spracovať
+              informácie a vytvárať hlbšie myšlienkové spojenia. Nie je to len o
+              získavaní vedomostí, ale aj o mentálnom oddychu.
+            </p>
+
+            <p>
+              Pravidelné čítanie podporuje predstavivosť, empatiu a schopnosť
+              sústrediť sa na jednu vec dlhší čas. Aj niekoľko strán denne môže mať
+              pozitívny vplyv na psychickú pohodu a kreativitu.
+            </p>
+
+            <p>
+              Digitálne čítačky, ak sú správne navrhnuté, dokážu ponúknuť pokojné
+              prostredie bez rušivých prvkov. Vďaka prispôsobiteľnému textu a
+              jednoduchému rozhraniu sa čítanie opäť stáva vedomým zážitkom.
+            </p>
+
+            <p>
+              Nájsť si čas na knihu znamená nájsť si čas pre seba. Je to malý únik
+              z každodenného zhonu, ktorý môže mať veľký vplyv na kvalitu života.
+            </p>
+          </div>
+        </section>
+
 
         <!-- Funkcie -->
         <section class="features">
@@ -29,7 +64,8 @@
             <div class="feature-card">
               <div class="feature-icon">🔖</div>
               <h3>Záložky</h3>
-              <p>Ukladajte si obľúbené miesta a vráťte sa k nim kedykoľvek</p>
+              <p>Naša čítačka si automaticky zapamätá vaše obľúbené miesta aby ste sa kedikoľvek mohli vrátiť do
+                čítania.</p>
             </div>
             <div class="feature-card">
               <div class="feature-icon">📊</div>
@@ -132,21 +168,21 @@ export default {
   .home-container {
     padding: 1.5rem;
   }
-  
+
   .hero h1 {
     font-size: 2rem;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .hero-buttons .btn {
     width: 100%;
     max-width: 300px;
   }
-  
+
   .features-grid {
     grid-template-columns: 1fr;
   }
